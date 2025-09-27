@@ -1,0 +1,7 @@
+##Two Sum Solution LeetCode
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i, val in enumerate(nums):
+            com_num = target - val
+            if com_num in nums[i+1:]:  
+                return [i, nums.index(com_num, i+1)]
